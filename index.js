@@ -8588,33 +8588,33 @@ function checkIncomingModuleAPI() {
   ignoredModuleProp('fetchSettings');
 }
 var ASM_CONSTS = {
-  105368: () => { Module.canvas.focus(); },  
- 105393: () => { window.addEventListener("keydown", (event) => { var key = stringToNewUTF8(event.key); var code = stringToNewUTF8(event.code); Module._RGFW_handleKeyMods(event.getModifierState("CapsLock"), event.getModifierState("NumLock"), event.getModifierState("Control"), event.getModifierState("Alt"), event.getModifierState("Shift"), event.getModifierState("Meta"), event.getModifierState("ScrollLock")); Module._RGFW_handleKeyEvent(key, code, 1); _free(key); _free(code); }, true); window.addEventListener("keyup", (event) => { var key = stringToNewUTF8(event.key); var code = stringToNewUTF8(event.code); Module._RGFW_handleKeyMods(event.getModifierState("CapsLock"), event.getModifierState("NumLock"), event.getModifierState("Control"), event.getModifierState("Alt"), event.getModifierState("Shift"), event.getModifierState("Meta"), event.getModifierState("ScrollLock")); Module._RGFW_handleKeyEvent(key, code, 0); _free(key); _free(code); }, true); },  
- 106339: () => { var canvas = document.getElementById('canvas'); canvas.addEventListener('drop', function(e) { e.preventDefault(); if (e.dataTransfer.file < 0) return; var filenamesArray = []; var count = e.dataTransfer.files.length; var drop_dir = '.rgfw_dropped_files'; Module._RGFW_mkdir(drop_dir); for (var i = 0; i < count; i++) { var file = e.dataTransfer.files[i]; var path = '/' + drop_dir + '/' + file.name.replace("//", '_'); var reader = new FileReader(); reader.onloadend = (e) => { if (reader.readyState != 2) { out('failed to read dropped file: '+file.name+': '+reader.error); } else { var data = e.target.result; _RGFW_writeFile(path, new Uint8Array(data), file.size); } }; reader.readAsArrayBuffer(file); var filename = stringToNewUTF8(path); filenamesArray.push(filename); Module._RGFW_makeSetValue(i, filename); } Module._Emscripten_onDrop(count); for (var i = 0; i < count; ++i) { _free(filenamesArray[i]); } }, true); canvas.addEventListener('dragover', function(e) { e.preventDefault(); return false; }, true); },  
- 107358: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); },  
- 107429: () => { document.getElementById('canvas').style.cursor = 'none'; },  
- 107486: () => { return window.mouseX || 0; },  
- 107517: () => { return window.mouseY || 0; },  
- 107548: ($0) => { var canvas = document.getElementById('canvas'); if ($0) { canvas.style.pointerEvents = 'none'; } else { canvas.style.pointerEvents = 'auto'; } },  
- 107695: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
- 107748: () => { return window.innerWidth; },  
- 107778: () => { return window.innerHeight; },  
- 107809: ($0, $1) => { var ext = UTF8ToString($0, $1); var canvas = document.querySelector('canvas'); var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl'); if (!gl) return 0; var supported = gl.getSupportedExtensions(); return supported && supported.includes(ext) ? 1 : 0; },  
- 108089: () => { Module.requestFullscreen(false, true); },  
- 108128: () => { Module.exitFullscreen(false, true); },  
- 108164: ($0, $1) => { var element = document.getElementById("canvas"); if (element) element.style.opacity = $1; }
+  105304: () => { Module.canvas.focus(); },  
+ 105329: () => { window.addEventListener("keydown", (event) => { var key = stringToNewUTF8(event.key); var code = stringToNewUTF8(event.code); Module._RGFW_handleKeyMods(event.getModifierState("CapsLock"), event.getModifierState("NumLock"), event.getModifierState("Control"), event.getModifierState("Alt"), event.getModifierState("Shift"), event.getModifierState("Meta"), event.getModifierState("ScrollLock")); Module._RGFW_handleKeyEvent(key, code, 1); _free(key); _free(code); }, true); window.addEventListener("keyup", (event) => { var key = stringToNewUTF8(event.key); var code = stringToNewUTF8(event.code); Module._RGFW_handleKeyMods(event.getModifierState("CapsLock"), event.getModifierState("NumLock"), event.getModifierState("Control"), event.getModifierState("Alt"), event.getModifierState("Shift"), event.getModifierState("Meta"), event.getModifierState("ScrollLock")); Module._RGFW_handleKeyEvent(key, code, 0); _free(key); _free(code); }, true); },  
+ 106275: () => { var canvas = document.getElementById('canvas'); canvas.addEventListener('drop', function(e) { e.preventDefault(); if (e.dataTransfer.file < 0) return; var filenamesArray = []; var count = e.dataTransfer.files.length; var drop_dir = '.rgfw_dropped_files'; Module._RGFW_mkdir(drop_dir); for (var i = 0; i < count; i++) { var file = e.dataTransfer.files[i]; var path = '/' + drop_dir + '/' + file.name.replace("//", '_'); var reader = new FileReader(); reader.onloadend = (e) => { if (reader.readyState != 2) { out('failed to read dropped file: '+file.name+': '+reader.error); } else { var data = e.target.result; _RGFW_writeFile(path, new Uint8Array(data), file.size); } }; reader.readAsArrayBuffer(file); var filename = stringToNewUTF8(path); filenamesArray.push(filename); Module._RGFW_makeSetValue(i, filename); } Module._Emscripten_onDrop(count); for (var i = 0; i < count; ++i) { _free(filenamesArray[i]); } }, true); canvas.addEventListener('dragover', function(e) { e.preventDefault(); return false; }, true); },  
+ 107294: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); },  
+ 107365: () => { document.getElementById('canvas').style.cursor = 'none'; },  
+ 107422: () => { return window.mouseX || 0; },  
+ 107453: () => { return window.mouseY || 0; },  
+ 107484: ($0) => { var canvas = document.getElementById('canvas'); if ($0) { canvas.style.pointerEvents = 'none'; } else { canvas.style.pointerEvents = 'auto'; } },  
+ 107631: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
+ 107684: () => { return window.innerWidth; },  
+ 107714: () => { return window.innerHeight; },  
+ 107745: ($0, $1) => { var ext = UTF8ToString($0, $1); var canvas = document.querySelector('canvas'); var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl'); if (!gl) return 0; var supported = gl.getSupportedExtensions(); return supported && supported.includes(ext) ? 1 : 0; },  
+ 108025: () => { Module.requestFullscreen(false, true); },  
+ 108064: () => { Module.exitFullscreen(false, true); },  
+ 108100: ($0, $1) => { var element = document.getElementById("canvas"); if (element) element.style.opacity = $1; }
 };
 
 // Imports from the Wasm binary.
 var _main = Module['_main'] = makeInvalidEarlyAccess('_main');
+var _free = makeInvalidEarlyAccess('_free');
+var _malloc = makeInvalidEarlyAccess('_malloc');
 var _RGFW_handleKeyEvent = Module['_RGFW_handleKeyEvent'] = makeInvalidEarlyAccess('_RGFW_handleKeyEvent');
 var _RGFW_handleKeyMods = Module['_RGFW_handleKeyMods'] = makeInvalidEarlyAccess('_RGFW_handleKeyMods');
 var _Emscripten_onDrop = Module['_Emscripten_onDrop'] = makeInvalidEarlyAccess('_Emscripten_onDrop');
 var _RGFW_makeSetValue = Module['_RGFW_makeSetValue'] = makeInvalidEarlyAccess('_RGFW_makeSetValue');
 var _RGFW_mkdir = Module['_RGFW_mkdir'] = makeInvalidEarlyAccess('_RGFW_mkdir');
 var _RGFW_writeFile = Module['_RGFW_writeFile'] = makeInvalidEarlyAccess('_RGFW_writeFile');
-var _free = makeInvalidEarlyAccess('_free');
-var _malloc = makeInvalidEarlyAccess('_malloc');
 var _fflush = makeInvalidEarlyAccess('_fflush');
 var _emscripten_stack_get_end = makeInvalidEarlyAccess('_emscripten_stack_get_end');
 var _emscripten_stack_get_base = makeInvalidEarlyAccess('_emscripten_stack_get_base');
@@ -8662,6 +8662,10 @@ var wasmMemory = makeInvalidEarlyAccess('wasmMemory');
 function assignWasmExports(wasmExports) {
   assert(typeof wasmExports['main'] != 'undefined', 'missing Wasm export: main');
   _main = Module['_main'] = createExportWrapper('main', 2);
+  assert(typeof wasmExports['free'] != 'undefined', 'missing Wasm export: free');
+  _free = createExportWrapper('free', 1);
+  assert(typeof wasmExports['malloc'] != 'undefined', 'missing Wasm export: malloc');
+  _malloc = createExportWrapper('malloc', 1);
   assert(typeof wasmExports['RGFW_handleKeyEvent'] != 'undefined', 'missing Wasm export: RGFW_handleKeyEvent');
   _RGFW_handleKeyEvent = Module['_RGFW_handleKeyEvent'] = createExportWrapper('RGFW_handleKeyEvent', 3);
   assert(typeof wasmExports['RGFW_handleKeyMods'] != 'undefined', 'missing Wasm export: RGFW_handleKeyMods');
@@ -8674,10 +8678,6 @@ function assignWasmExports(wasmExports) {
   _RGFW_mkdir = Module['_RGFW_mkdir'] = createExportWrapper('RGFW_mkdir', 1);
   assert(typeof wasmExports['RGFW_writeFile'] != 'undefined', 'missing Wasm export: RGFW_writeFile');
   _RGFW_writeFile = Module['_RGFW_writeFile'] = createExportWrapper('RGFW_writeFile', 3);
-  assert(typeof wasmExports['free'] != 'undefined', 'missing Wasm export: free');
-  _free = createExportWrapper('free', 1);
-  assert(typeof wasmExports['malloc'] != 'undefined', 'missing Wasm export: malloc');
-  _malloc = createExportWrapper('malloc', 1);
   assert(typeof wasmExports['fflush'] != 'undefined', 'missing Wasm export: fflush');
   _fflush = createExportWrapper('fflush', 1);
   assert(typeof wasmExports['emscripten_stack_get_end'] != 'undefined', 'missing Wasm export: emscripten_stack_get_end');
